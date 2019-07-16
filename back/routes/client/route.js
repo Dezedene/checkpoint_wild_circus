@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const connection = require('../conf')
+const connection = require('../../conf')
 const bodyParser = require('body-parser');
 
 const { getByClientName } = require('./queries')
 
 router.use((req, res, next) => {
-  next
+  next()
 })
 
 // Support JSON-encoded bodies
@@ -18,8 +18,8 @@ router.use(bodyParser.urlencoded({
 }));
 
 
-router.get('/client/:name', (req, res) => {
-  const clientName = request.params.clientName
+router.get('/:name', (req, res) => {
+  const clientName = req.params.clientName
 
   connection.query(getByClientName, [clientName], (err, datas) => {
     if (err) {
