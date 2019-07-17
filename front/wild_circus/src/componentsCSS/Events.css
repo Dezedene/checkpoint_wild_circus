@@ -1,0 +1,49 @@
+.eventsTitle {
+  text-align: center;
+  font-size: 4.5em;
+  font-family: Amatic SC;
+  font-weight: bold;
+  display:block;
+  margin: auto;
+  padding-top: 10px;
+  background: #FFDE56;
+  color:#fff;
+  border: dashed;
+  margin-bottom: 15px;
+  padding-right: 0px;
+}
+
+.ticketSpace {
+  text-align: center;
+  border: solid; 
+  border-color: #FFDE56;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #F4F2F5;
+  margin-left: 1em;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.eventInstruction {
+  font-weight: bold;
+  font-family: "Amatic SC";
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  line-height: 0.5;
+  text-align: center;
+}
+
+.ticketImage {
+  max-width: 100%;
+}
+
+.wednesdayThursdayRow {
+  margin-top: 2em;
+}
+
+.shop {
+  max-width: 10%;
+  margin-left: 20px;
+}

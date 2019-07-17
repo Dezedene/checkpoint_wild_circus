@@ -12,12 +12,13 @@ const Performances = ({goToHomePage}) => {
       <header>
       <h2 className = "performanceTitle">Performances</h2>
       </header>
-      <h3 className = "eventTeasing">
-          Program : <br/>
-        - Exchanges as crazy as irrational. <br/> 
-        - Eyes fights and multiple intimidations <br/> 
-        - Transformations
-      </h3>
+
+        <div className = "eventTeasing">
+          <p className = "exchanges">- Exchanges as crazy as irrational.</p>
+          <p className = "eyes">- Eyes fights and multiple intimidations.</p>
+          <p className = "transformation">- Transformations.</p>
+        </div>
+      
       <Row className ="mathRow">
         <Col xs="6" md="3"><img className = "tokoiHotel" src={mathTokioHotel} alt = "mathTokoiHotel" /></Col>
         <Col xs="6" md="3"><p><strong>Particularity:</strong> He doesn't understand, and he's not as stupid as this</p>

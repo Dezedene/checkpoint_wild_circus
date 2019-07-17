@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import HomePage from './components/Homepage';
 import WhoWeAre from './components/WhoWeAre';
 import Performances from './components/Performances'
+import Events from './components/Events' 
 import './App.css';
 
 
@@ -12,6 +13,8 @@ class App extends Component {
       isHomePageDisplayed : true,
       whoWeAreIsDisplayed : false,
       isPerformancesPageDisplayed: false,
+      isEventsPageDisplayed : false,
+      numberOfTicketPurchased: "",
     }
   }
 
@@ -21,6 +24,7 @@ class App extends Component {
       isHomePageDisplayed: true,
       whoWeAreIsDisplayed: false,
       isPerformancesPageDisplayed: false,
+      isEventsPageDisplayed : false,
     })
   }
 
@@ -37,22 +41,32 @@ class App extends Component {
     this.setState({
       isHomePageDisplayed : false,
       isPerformancesPageDisplayed : true,
-  })
-}
+    })
+  }
+  
+  goToEvents = (event) => {
+    event.preventDefault()
+    this.setState({
+      isHomePageDisplayed : false,
+      isEventsPageDisplayed : true,
+    })
+  }
 
-
-  render(){
+  render() {
   return (
     <div className="App">
       {this.state.isHomePageDisplayed && 
       <HomePage goToWhoWeAre={this.goToWhoWeAre}
-      goToPerformances={this.goToPerformances}/>} 
+      goToPerformances={this.goToPerformances}
+      goToEvents={this.goToEvents}/>}
       {this.state.whoWeAreIsDisplayed && 
       <WhoWeAre goToHomePage={this.goToHomePage}/>}
       {this.state.isPerformancesPageDisplayed &&
       <Performances goToHomePage={this.goToHomePage}/>}
+      {this.state.isEventsPageDisplayed &&
+      <Events goToHomePage={this.goToHomePage}/>}
     </div>
-  );
+  )
   }
 }
 

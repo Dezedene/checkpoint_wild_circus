@@ -1,7 +1,7 @@
 .whoWeAreTitle {
   text-align: center;
   font-size: 4.5em;
-  padding-top: 13px;
+  padding-top: 10px;
   font-family: Amatic SC;
   background: blue;
   border: dashed;
@@ -12,11 +12,13 @@
 }
 
 .presentationOfMathAndSeb {
+  font-family: "Amatic SC";
+  font-weight: bold;
   font-size: 19px;
-  color: blue;
   margin-top: 20px;
   padding-left: 5px;
   background: #F4F2F5;
+  border-radius: 10px;
 }
 
 .mathAndSebPicture {
@@ -27,7 +29,7 @@
 
 .backArrow {
   max-width: 15%;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .backButton {
