@@ -18,6 +18,7 @@ class App extends Component {
       numberOfThursdayTicketPurchased: 0,
       numberOfSaturdayTicketPurchased: 0,
       numberOfSundayTicketPurchased: 0,
+      totalNumberOfTicketPurchased: 0,
     }
   }
 
@@ -59,6 +60,7 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       numberOfWednesdayTicketPurchased : this.state.numberOfWednesdayTicketPurchased +1,
+      totalNumberOfTicketPurchased : this.state.totalNumberOfTicketPurchased +1,
     })
   }
 
@@ -66,6 +68,7 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       numberOfThursdayTicketPurchased : this.state.numberOfThursdayTicketPurchased +1,
+      totalNumberOfTicketPurchased : this.state.totalNumberOfTicketPurchased +1,
     })
   }
 
@@ -73,6 +76,7 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       numberOfSaturdayTicketPurchased : this.state.numberOfSaturdayTicketPurchased +1,
+      totalNumberOfTicketPurchased : this.state.totalNumberOfTicketPurchased +1,
     })
   }
 
@@ -80,8 +84,10 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       numberOfSundayTicketPurchased : this.state.numberOfSundayTicketPurchased +1,
+      totalNumberOfTicketPurchased : this.state.totalNumberOfTicketPurchased +1,
     })
   }
+
 
   render() {
   return (
