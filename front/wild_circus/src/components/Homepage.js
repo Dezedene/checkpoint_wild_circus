@@ -3,7 +3,7 @@ import { Container, Col, Row } from 'reactstrap';
 import '../componentsCSS/Homepage.css';
 import '../App.css';
 
-const Homepage = ({}) => {
+const Homepage = ({goToWhoWeAre}) => {
   return(
     <Container>
       <header className="card-support head">
@@ -13,7 +13,7 @@ const Homepage = ({}) => {
         <Row>
           <Col sm="12" md="6">
             
-              <button className = "homepageButtons whoWeAre">Who We Are</button>
+              <button className = "homepageButtons whoWeAre" onClick={goToWhoWeAre}>Who We Are</button>
               <button className = "homepageButtons performances">Performances</button>
               <button className = "homepageButtons events">Events Booking</button>
               <button className = "homepageButtons contact">Contact</button>
