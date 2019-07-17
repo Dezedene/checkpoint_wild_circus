@@ -1,0 +1,42 @@
+.title {
+  text-align: center;
+  font-size: 5.5em;
+  font-family: Amatic SC;
+  font-weight: bold;
+  display:block;
+  margin: auto;
+  background: #e74c3c;
+  color:#fff;
+  border: dashed;
+  margin-bottom: 25px;
+}
+
+.homepageButtons {
+  width: 100%;
+  border-radius: 47px;
+  height: 90px;
+  background-color: white;
+  color: grey;
+  font-size: 22px;
+  font-weight: bold;
+  outline: none;
+  margin-bottom: 5px;
+  margin-top: 1em;
+  border: solid 1px;
+}
+
+.whoWeAre {
+  border-color: blue;
+}
+
+.performances {
+  border-color: green;
+}
+
+.events {
+  border-color: red;
+}
+
+.contact {
+  border-color: purple;
+}
