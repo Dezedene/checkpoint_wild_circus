@@ -9,6 +9,7 @@
   color:#fff;
   border: dashed;
   margin-bottom: 25px;
+  padding-right: 0px;
 }
 
 .homepageButtons {
@@ -25,18 +26,18 @@
   border: solid 1px;
 }
 
-.whoWeAre {
+.whoWeAreButton {
   border-color: blue;
 }
 
-.performances {
+.performancesButton {
   border-color: green;
 }
 
-.events {
+.eventsButton {
   border-color: red;
 }
 
-.contact {
+.contactButton {
   border-color: purple;
 }

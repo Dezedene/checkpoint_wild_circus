@@ -20,13 +20,21 @@ class App extends Component {
     })
   }
 
+  goToHomePage = (event) => {
+    event.preventDefault()
+    this.setState({
+      isHomePageDisplayed: true,
+      whoWeAreIsDisplayed: false,
+    })
+  }
+
   render(){
   return (
     <div className="App">
       {this.state.isHomePageDisplayed && 
       <HomePage goToWhoWeAre={this.goToWhoWeAre}/>} 
       {this.state.whoWeAreIsDisplayed && 
-      <WhoWeAre />}
+      <WhoWeAre goToHomePage={this.goToHomePage}/>}
     </div>
   );
   }

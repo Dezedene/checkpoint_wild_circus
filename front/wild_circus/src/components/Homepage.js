@@ -13,10 +13,10 @@ const Homepage = ({goToWhoWeAre}) => {
         <Row>
           <Col sm="12" md="6">
             
-              <button className = "homepageButtons whoWeAre" onClick={goToWhoWeAre}>Who We Are</button>
-              <button className = "homepageButtons performances">Performances</button>
-              <button className = "homepageButtons events">Events Booking</button>
-              <button className = "homepageButtons contact">Contact</button>
+              <button className = "homepageButtons whoWeAreButton" onClick={goToWhoWeAre}>Who We Are</button>
+              <button className = "homepageButtons performancesButton">Performances</button>
+              <button className = "homepageButtons eventsButton">Events Booking</button>
+              <button className = "homepageButtons contactButton">Contact</button>
             
           </Col>
         </Row>
