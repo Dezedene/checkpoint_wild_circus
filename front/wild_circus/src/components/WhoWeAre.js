@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
 import backArrow from '../images/left-arrow.png';
 import '../App.css';
 import '../componentsCSS/WhoWeAre.css'
@@ -8,7 +8,7 @@ const WhoWeAre = ({goToHomePage}) => {
   return (
     <Container>
       <header>
-      <h2 className = "pageTitle">Who We Are</h2>
+      <h2 className = "whoWeAreTitle">Who We Are</h2>
       </header>
       <section>
         <h3 className = "presentationOfMathAndSeb">This lovely story began at Wild Code School when Math and Seb hopefully met, 

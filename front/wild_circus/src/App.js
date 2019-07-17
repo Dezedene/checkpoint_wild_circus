@@ -1,7 +1,9 @@
 import React, { Component} from 'react';
 import HomePage from './components/Homepage';
-import './App.css';
 import WhoWeAre from './components/WhoWeAre';
+import Performances from './components/Performances'
+import './App.css';
+
 
 class App extends Component {
   constructor(){
@@ -9,7 +11,17 @@ class App extends Component {
     this.state = {
       isHomePageDisplayed : true,
       whoWeAreIsDisplayed : false,
+      isPerformancesPageDisplayed: false,
     }
+  }
+
+  goToHomePage = (event) => {
+    event.preventDefault()
+    this.setState({
+      isHomePageDisplayed: true,
+      whoWeAreIsDisplayed: false,
+      isPerformancesPageDisplayed: false,
+    })
   }
 
   goToWhoWeAre = (event) => {
@@ -20,21 +32,25 @@ class App extends Component {
     })
   }
 
-  goToHomePage = (event) => {
+  goToPerformances = (event) => {
     event.preventDefault()
     this.setState({
-      isHomePageDisplayed: true,
-      whoWeAreIsDisplayed: false,
-    })
-  }
+      isHomePageDisplayed : false,
+      isPerformancesPageDisplayed : true,
+  })
+}
+
 
   render(){
   return (
     <div className="App">
       {this.state.isHomePageDisplayed && 
-      <HomePage goToWhoWeAre={this.goToWhoWeAre}/>} 
+      <HomePage goToWhoWeAre={this.goToWhoWeAre}
+      goToPerformances={this.goToPerformances}/>} 
       {this.state.whoWeAreIsDisplayed && 
       <WhoWeAre goToHomePage={this.goToHomePage}/>}
+      {this.state.isPerformancesPageDisplayed &&
+      <Performances goToHomePage={this.goToHomePage}/>}
     </div>
   );
   }
