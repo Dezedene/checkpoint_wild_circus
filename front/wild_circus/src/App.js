@@ -14,7 +14,10 @@ class App extends Component {
       whoWeAreIsDisplayed : false,
       isPerformancesPageDisplayed: false,
       isEventsPageDisplayed : false,
-      numberOfTicketPurchased: "",
+      numberOfWednesdayTicketPurchased: 0,
+      numberOfThursdayTicketPurchased: 0,
+      numberOfSaturdayTicketPurchased: 0,
+      numberOfSundayTicketPurchased: 0,
     }
   }
 
@@ -52,6 +55,34 @@ class App extends Component {
     })
   }
 
+  buyWednesdayTicket = (event) => {
+    event.preventDefault()
+    this.setState({
+      numberOfWednesdayTicketPurchased : this.state.numberOfWednesdayTicketPurchased +1,
+    })
+  }
+
+  buyThursdayTicket = (event) => {
+    event.preventDefault()
+    this.setState({
+      numberOfThursdayTicketPurchased : this.state.numberOfThursdayTicketPurchased +1,
+    })
+  }
+
+  buySaturdayTicket = (event) => {
+    event.preventDefault()
+    this.setState({
+      numberOfSaturdayTicketPurchased : this.state.numberOfSaturdayTicketPurchased +1,
+    })
+  }
+
+  buySundayTicket = (event) => {
+    event.preventDefault()
+    this.setState({
+      numberOfSundayTicketPurchased : this.state.numberOfSundayTicketPurchased +1,
+    })
+  }
+
   render() {
   return (
     <div className="App">
@@ -64,7 +95,11 @@ class App extends Component {
       {this.state.isPerformancesPageDisplayed &&
       <Performances goToHomePage={this.goToHomePage}/>}
       {this.state.isEventsPageDisplayed &&
-      <Events goToHomePage={this.goToHomePage}/>}
+      <Events goToHomePage={this.goToHomePage}
+      buyWednesdayTicket={this.buyWednesdayTicket}
+      buyThursdayTicket={this.buyThursdayTicket}
+      buySaturdayTicket={this.buySaturdayTicket}
+      buySundayTicket={this.buySundayTicket}/>}
     </div>
   )
   }

@@ -6,7 +6,7 @@ import shop from '../images/shop.png';
 import '../componentsCSS/Events.css';
 import '../App.css';
 
-const Events = ({goToHomePage}) => {
+const Events = ({goToHomePage, buyWednesdayTicket, buyThursdayTicket, buySaturdayTicket, buySundayTicket}) => {
   return (
     <Container>
       <header>
@@ -24,24 +24,24 @@ const Events = ({goToHomePage}) => {
             <p>Wednesday</p>
             <p></p>
             <p>8 PM</p>
-            <img className="ticketImage" src={ticket} alt="ticket"/>
+            <img className="ticketImage" src={ticket} alt="ticket" onClick={buyWednesdayTicket}/>
           </Col>
           <Col xs="5" md="3" className = "ticketSpace">
           <p>Thursday</p>
             <p>8 PM</p>
-            <img className="ticketImage" src={ticket} alt="ticket"/>
+            <img className="ticketImage" src={ticket} alt="ticket" onClick={buyThursdayTicket}/>
           </Col>
         </Row>
         <Row>
           <Col xs="5" md="3" className = "ticketSpace">
           <p>Saturday</p>
             <p>8 PM</p>
-            <img className="ticketImage" src={ticket} alt="ticket"/>
+            <img className="ticketImage" src={ticket} alt="ticket" onClick={buySaturdayTicket}/>
           </Col>
           <Col xs="5" md="3" className = "ticketSpace">
           <p>Sunday</p>
             <p>8 PM</p>
-            <img className="ticketImage" src={ticket} alt="ticket"/>
+            <img className="ticketImage" src={ticket} alt="ticket" onClick={buySundayTicket}/>
           </Col>
         </Row>
       </div>
