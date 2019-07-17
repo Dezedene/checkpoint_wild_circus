@@ -1,0 +1,14 @@
+.contactTitle {
+  text-align: center;
+  font-size: 4.5em;
+  font-family: Amatic SC;
+  font-weight: bold;
+  display:block;
+  margin: auto;
+  padding-top: 10px;
+  background: #FFDE56;
+  color:#fff;
+  border: dashed;
+  margin-bottom: 15px;
+  padding-right: 0px;
+}

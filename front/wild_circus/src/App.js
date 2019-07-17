@@ -1,8 +1,9 @@
 import React, { Component} from 'react';
 import HomePage from './components/Homepage';
 import WhoWeAre from './components/WhoWeAre';
-import Performances from './components/Performances'
-import Events from './components/Events' 
+import Performances from './components/Performances';
+import Events from './components/Events';
+import Contact from './components/Contact';
 import './App.css';
 
 
@@ -14,6 +15,7 @@ class App extends Component {
       whoWeAreIsDisplayed : false,
       isPerformancesPageDisplayed: false,
       isEventsPageDisplayed : false,
+      isContactPageDisplayed : false,
       numberOfWednesdayTicketPurchased: 0,
       numberOfThursdayTicketPurchased: 0,
       numberOfSaturdayTicketPurchased: 0,
@@ -56,6 +58,14 @@ class App extends Component {
     })
   }
 
+  goToContact = (event) => {
+    event.preventDefault()
+    this.setState({
+      isHomePageDisplayed : false,
+      isContactPageDisplayed : true,
+    })
+  }
+
   buyWednesdayTicket = (event) => {
     event.preventDefault()
     this.setState({
@@ -95,7 +105,8 @@ class App extends Component {
       {this.state.isHomePageDisplayed && 
       <HomePage goToWhoWeAre={this.goToWhoWeAre}
       goToPerformances={this.goToPerformances}
-      goToEvents={this.goToEvents}/>}
+      goToEvents={this.goToEvents}
+      goToContact={this.goToContact}/>}
       {this.state.whoWeAreIsDisplayed && 
       <WhoWeAre goToHomePage={this.goToHomePage}/>}
       {this.state.isPerformancesPageDisplayed &&
@@ -105,7 +116,10 @@ class App extends Component {
       buyWednesdayTicket={this.buyWednesdayTicket}
       buyThursdayTicket={this.buyThursdayTicket}
       buySaturdayTicket={this.buySaturdayTicket}
-      buySundayTicket={this.buySundayTicket}/>}
+      buySundayTicket={this.buySundayTicket}
+      totalNumberOfTicketPurchased={this.state.totalNumberOfTicketPurchased}/>}
+      {this.state.isContactPageDisplayed &&
+      <Contact goToHomePage={this.goToHomePage}/>}
     </div>
   )
   }

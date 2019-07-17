@@ -6,7 +6,7 @@ import shop from '../images/shop.png';
 import '../componentsCSS/Events.css';
 import '../App.css';
 
-const Events = ({goToHomePage, buyWednesdayTicket, buyThursdayTicket, buySaturdayTicket, buySundayTicket}) => {
+const Events = ({goToHomePage, buyWednesdayTicket, buyThursdayTicket, buySaturdayTicket, buySundayTicket, totalNumberOfTicketPurchased}) => {
   return (
     <Container>
       <header>
@@ -47,15 +47,13 @@ const Events = ({goToHomePage, buyWednesdayTicket, buyThursdayTicket, buySaturda
       </div>
 
       <Row>
-        <Col>
-          <img className="shop" src={shop} alt="shop"/> 
-        </Col>
+          <img className="shop" src={shop} alt="shop"/> <p className = "ticketPurchased">You've bought {totalNumberOfTicketPurchased} tickets !!</p>  
       </Row>
        
-  
       <div>
             <button className= "backButton" onClick={goToHomePage}><img className="backArrowPerf" src={backArrow} alt="backArrow"/></button>
       </div>
+
     </Container>
   )
   
