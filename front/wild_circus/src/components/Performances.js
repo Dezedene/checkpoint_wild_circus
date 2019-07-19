@@ -29,7 +29,7 @@ const Performances = ({goToHomePage}) => {
         <Col xs="6" md="3"><img className = "tokoiHotel" src={sebTokioHotel} alt = "sebTokioHotel" /></Col>
         <Col xs="6" md="3"><p><strong>Particularity:</strong> He just don't care</p>
         <p><strong>Special Attack: </strong>To be inactive</p>
-        <p><strong>Secret: </strong>The Red Room</p></Col>
+        <p><strong>Secret: </strong>The Secret Room</p></Col>
       </Row>
       <div>
           <button className= "backButton" onClick={goToHomePage}><img className="backArrowPerf" src={backArrow} alt="backArrow"/></button>
