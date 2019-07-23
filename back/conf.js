@@ -8,4 +8,10 @@ const connection = mysql.createConnection({
   database: 'wild_circus',
 });
 
+connection.connect(err => {
+  if(err) {
+    return err;
+  }
+});
+
 module.exports = connection;
